@@ -1,0 +1,35 @@
+/* Global CRM Theme Variables */
+:root {
+  --color-primary: #19d27b;
+  --color-secondary: #424242;
+  --color-accent: #ff8080;
+  --color-bg: #fcfcfb;
+  --color-input-bg: #fff;
+  --color-border: #d1dee9;
+  --color-text-main: #181c25;
+  --color-header: #19d27b;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: "Inter", Arial, sans-serif;
+  min-height: 100vh;
+  padding: 0; margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  transition: background .18s;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
