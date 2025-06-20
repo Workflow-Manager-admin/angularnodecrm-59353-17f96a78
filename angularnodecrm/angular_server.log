@@ -6,201 +6,55 @@ Warning: Running a server with --disable-host-check is a security risk. See http
 The "disableHostCheck" option will not be used because it is not supported by the "@angular-devkit/build-angular:application" builder.
 ❯ Building...
 ✔ Building...
-Browser bundles     
-Initial chunk files  | Names            |  Raw size
-polyfills.js         | polyfills        |  90.20 kB | 
-main.js              | main             |  22.59 kB | 
-styles.css           | styles           |  95 bytes | 
+Application bundle generation failed. [2.582 seconds]
 
-                     | Initial total    | 112.88 kB
+▲ [WARNING] TS-998113: RouterLink is not used within the template of DashboardComponent [plugin angular-compiler]
+
+    src/app/features/dashboard/dashboard.component.ts:11:39:
+      11 │   imports: [CommonModule, FormsModule, RouterLink],
+         ╵                                        ~~~~~~~~~~
 
 
-Server bundles      
-Initial chunk files  | Names            |  Raw size
-polyfills.server.mjs | polyfills.server | 572.91 kB | 
-chunk-6XEG6CM6.mjs   | -                |  23.02 kB | 
-server.mjs           | server           |   1.39 kB | 
-main.server.mjs      | main.server      | 800 bytes | 
+✘ [ERROR] TS2304: Cannot find name 'inject'. [plugin angular-compiler]
 
-Application bundle generation complete. [2.003 seconds]
+    src/app/core/api.service.ts:24:11:
+      24 │     return inject(HttpClient).get<Customer[]>('/api/customers');
+         ╵            ~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'inject'. [plugin angular-compiler]
+
+    src/app/core/api.service.ts:29:11:
+      29 │     return inject(HttpClient).post<Customer>('/api/customers', data);
+         ╵            ~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'inject'. [plugin angular-compiler]
+
+    src/app/core/api.service.ts:34:11:
+      34 │     return inject(HttpClient).delete<void>(`/api/customers/${id}`);
+         ╵            ~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'inject'. [plugin angular-compiler]
+
+    src/app/core/api.service.ts:39:11:
+      39 │     return inject(HttpClient).put<Customer>(`/api/customers/${id}`...
+         ╵            ~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'inject'. [plugin angular-compiler]
+
+    src/app/core/api.service.ts:44:11:
+      44 │     return inject(HttpClient).get<Note[]>(`/api/customers/${custom...
+         ╵            ~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'inject'. [plugin angular-compiler]
+
+    src/app/core/api.service.ts:49:11:
+      49 │     return inject(HttpClient).post<Note>(`/api/customers/${custome...
+         ╵            ~~~~~~
+
 
 Watch mode enabled. Watching for file changes...
-NOTE: Raw file sizes do not reflect development server per-request transformations.
-  ➜  Local:   http://localhost:3000/
-  ➜  Network: http://172.17.0.2:3000/
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
-Application bundle generation failed. [0.283 seconds]
-
-✘ [ERROR] Could not resolve "./features/auth/login.component"
-
-    src/app/app.routes.ts:5:36:
-      5 │ ...t: () => import('./features/auth/login.component').then(m => m.L...
-        ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] TS2307: Cannot find module './features/auth/login.component' or its corresponding type declarations. [plugin angular-compiler]
-
-    src/app/app.routes.ts:7:32:
-      7 │ ...t: () => import('./features/auth/login.component').then(m => m.L...
-        ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/auth/signup.component"
-
-    src/app/app.routes.ts:9:36:
-      9 │ ...: () => import('./features/auth/signup.component').then(m => m.S...
-        ╵                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] TS2307: Cannot find module './features/auth/signup.component' or its corresponding type declarations. [plugin angular-compiler]
-
-    src/app/app.routes.ts:11:32:
-      11 │ ...: () => import('./features/auth/signup.component').then(m => m....
-         ╵                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/dashboard/dashboard.component"
-
-    src/app/app.routes.ts:13:36:
-      13 │ ... => import('./features/dashboard/dashboard.component').then(m =...
-         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] TS2307: Cannot find module './features/dashboard/dashboard.component' or its corresponding type declarations. [plugin angular-compiler]
-
-    src/app/app.routes.ts:15:32:
-      15 │ ... => import('./features/dashboard/dashboard.component').then(m =...
-         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/customer/customer-detail.component"
-
-    src/app/app.routes.ts:17:44:
-      17 │ ...=> import('./features/customer/customer-detail.component').then...
-         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] TS2307: Cannot find module './features/customer/customer-detail.component' or its corresponding type declarations. [plugin angular-compiler]
-
-    src/app/app.routes.ts:19:36:
-      19 │ ...=> import('./features/customer/customer-detail.component').then...
-         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/auth/login.component"
-
-    src/app/app.routes.ts:5:36:
-      5 │ ...t: () => import('./features/auth/login.component').then(m => m.L...
-        ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/auth/signup.component"
-
-    src/app/app.routes.ts:9:36:
-      9 │ ...: () => import('./features/auth/signup.component').then(m => m.S...
-        ╵                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/dashboard/dashboard.component"
-
-    src/app/app.routes.ts:13:36:
-      13 │ ... => import('./features/dashboard/dashboard.component').then(m =...
-         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/customer/customer-detail.component"
-
-    src/app/app.routes.ts:17:44:
-      17 │ ...=> import('./features/customer/customer-detail.component').then...
-         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
-Application bundle generation failed. [0.006 seconds]
-
-✘ [ERROR] Could not resolve "./features/auth/login.component"
-
-    src/app/app.routes.ts:5:36:
-      5 │ ...t: () => import('./features/auth/login.component').then(m => m.L...
-        ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] TS2307: Cannot find module './features/auth/login.component' or its corresponding type declarations. [plugin angular-compiler]
-
-    src/app/app.routes.ts:7:32:
-      7 │ ...t: () => import('./features/auth/login.component').then(m => m.L...
-        ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/auth/signup.component"
-
-    src/app/app.routes.ts:9:36:
-      9 │ ...: () => import('./features/auth/signup.component').then(m => m.S...
-        ╵                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] TS2307: Cannot find module './features/auth/signup.component' or its corresponding type declarations. [plugin angular-compiler]
-
-    src/app/app.routes.ts:11:32:
-      11 │ ...: () => import('./features/auth/signup.component').then(m => m....
-         ╵                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/dashboard/dashboard.component"
-
-    src/app/app.routes.ts:13:36:
-      13 │ ... => import('./features/dashboard/dashboard.component').then(m =...
-         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] TS2307: Cannot find module './features/dashboard/dashboard.component' or its corresponding type declarations. [plugin angular-compiler]
-
-    src/app/app.routes.ts:15:32:
-      15 │ ... => import('./features/dashboard/dashboard.component').then(m =...
-         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/customer/customer-detail.component"
-
-    src/app/app.routes.ts:17:44:
-      17 │ ...=> import('./features/customer/customer-detail.component').then...
-         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] TS2307: Cannot find module './features/customer/customer-detail.component' or its corresponding type declarations. [plugin angular-compiler]
-
-    src/app/app.routes.ts:19:36:
-      19 │ ...=> import('./features/customer/customer-detail.component').then...
-         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/auth/login.component"
-
-    src/app/app.routes.ts:5:36:
-      5 │ ...t: () => import('./features/auth/login.component').then(m => m.L...
-        ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/auth/signup.component"
-
-    src/app/app.routes.ts:9:36:
-      9 │ ...: () => import('./features/auth/signup.component').then(m => m.S...
-        ╵                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/dashboard/dashboard.component"
-
-    src/app/app.routes.ts:13:36:
-      13 │ ... => import('./features/dashboard/dashboard.component').then(m =...
-         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] Could not resolve "./features/customer/customer-detail.component"
-
-    src/app/app.routes.ts:17:44:
-      17 │ ...=> import('./features/customer/customer-detail.component').then...
-         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
